@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { CityData, Country, Data } from "../types/type";
-import { FaEye, FaEyeSlash, FaTelegramPlane } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaTelegramPlane, FaGithub } from "react-icons/fa";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import { CountryData } from "../types/type";
 import { useNavigate } from "react-router-dom";
@@ -250,7 +250,16 @@ const Main: React.FC<MainProps> = ({ data, setData }) => {
   return (
     <div className="h-full md:h-auto md:min-h-[300px] bg-slate-200 rounded-md shadow-sm p-4 w-full md:w-[500px] flex flex-col gap-4 text-[#232323]">
       <div className="flex flex-col w-full gap-2">
-        <h1 className="text-3xl font-bold">Sign Up</h1>
+        <h1 className="text-3xl font-bold flex items-center gap-3">
+          Sign Up{" "}
+          <FaGithub
+            size={25}
+            onClick={() => {
+              window.location.replace("https://github.com/psykat1116/CSI_Project1");
+            }}
+            className="cursor-pointer"
+          />
+        </h1>
         <p>Start Your Journey From Here</p>
       </div>
       <div className="w-full flex items-center justify-center">{Content}</div>
